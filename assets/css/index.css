@@ -1,0 +1,444 @@
+/*fontello*/
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello-547d24f5/font/fontello.eot?79190030');
+  src: url('../fonts/fontello-547d24f5/font/fontello.eot?79190030#iefix') format('embedded-opentype'),
+       url('../fonts/fontello-547d24f5/font/fontello.woff2?79190030') format('woff2'),
+       url('../fonts/fontello-547d24f5/font/fontello.woff?79190030') format('woff'),
+       url('../fonts/fontello-547d24f5/font/fontello.ttf?79190030') format('truetype'),
+       url('../fonts/fontello-547d24f5/font/fontello.svg?79190030#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?79190030#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-globe:before { content: '\e801'; } /* '' */
+.icon-home:before { content: '\e802'; } /* '' */
+.icon-user:before { content: '\e803'; } /* '' */
+.icon-globe-1:before { content: '\e804'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */
+/*fonts*/
+@font-face {
+  font-family: 'OverpassMono-Regular';
+  src: url('../fonts/OverpassMono-Regular/OverpassMono-Regular.eot?#iefix') format('embedded-opentype'),
+   		 url('../fonts/OverpassMono-Regular/OverpassMono-Regular.woff') format('woff'),
+   		 url('../fonts/OverpassMono-Regular/OverpassMono-Regular.ttf')  format('truetype'),
+   		 url('../fonts/OverpassMono-Regular/OverpassMono-Regular.svg#OverpassMono-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OverpassMono-Bold';
+  src: url('../fonts/OverpassMono-Bold/OverpassMono-Bold.eot?#iefix') format('embedded-opentype'),
+  		 url('../fonts/OverpassMono-Bold/OverpassMono-Bold.woff') format('woff'),
+  		 url('../fonts/OverpassMono-Bold/OverpassMono-Bold.ttf')  format('truetype'),
+  		 url('../fonts/OverpassMono-Bold/OverpassMono-Bold.svg#OverpassMono-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*reset*/
+* {
+	margin: 0;
+	padding: 0;
+	transition: .2s;
+	/*border: 1px solid red;*/
+}
+a {
+	text-decoration: none;
+	color: var(--warna2);
+}
+a:hover {
+	font-family: OverpassMono-Bold;
+}
+/*warna untuk theme switch*/
+:root {
+	--warna1: #fff;
+	--warna2: #000;
+	--warna3: #fc0;
+	--warna4: #fc0;
+	--warna5: #000;
+	--warna6: #000;
+}
+[data-theme="dark"] {
+  --warna1: #000;
+  --warna2: #fff;
+  --warna4: #111;
+  --warna5: #fc0;
+  --warna6: #000;
+}
+/*style*/
+body {
+	background-color: var(--warna4);
+	color: var(--warna2);
+	font-family: OverpassMono-Regular, monospace;
+}
+.shadow {
+	background-color: var(--warna5);
+	-webkit-transform: rotate(-1deg) translate(-51%, -49%);
+	-ms-transform: rotate(-1deg) translate(-51%, -49%);
+	-o-transform: rotate(-1deg) translate(-51%, -49%);
+	transform: rotate(-1deg) translate(-51%, -49%);
+}
+.shadow, .wrap {
+	min-height: 400px;
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.wrap {
+	background-color: var(--warna1);
+	-webkit-transform: rotate(0.5deg) translate(-49%, -51%);
+	-ms-transform: rotate(0.5deg) translate(-49%, -51%);
+	-o-transform: rotate(0.5deg) translate(-49%, -51%);
+	transform: rotate(0.5deg) translate(-49%, -51%);
+}
+.container {
+	height: 400px;
+	position: relative;
+	-webkit-transform: rotate(-0.5deg);
+	-ms-transform: rotate(-0.5deg);
+	-o-transform: rotate(-0.5deg);
+	transform: rotate(-0.5deg);
+}
+/*menu*/
+.menuA {
+	position: absolute;
+	top: 7px;
+	right: -20px;
+	z-index: 9;
+}
+.menuB {
+	position: absolute;
+	bottom: 0;
+	left: -20px;
+	z-index: 9;
+}
+.menuA .menuItem {
+	border-radius: 20px;
+	font-size: 20px;
+}
+.menuBActive {
+	padding-left: 10px;
+}
+.menuItem {
+	margin-bottom: 5px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 24px;
+	border-radius: 4px;
+	width: 40px;
+	height: 40px;
+	color: var(--warna1);
+	background-color: var(--warna2);
+	display: block;
+	cursor: pointer;
+}
+/*page*/
+.page {
+	height: 400px;
+	box-sizing: border-box;
+	padding: 20px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	/*display: none;*/
+	opacity: 0;
+}
+.pageShow {
+	/*display: block;*/
+	opacity: 1;
+}
+.pageHidden {
+	display: none;
+}
+.page h1 {
+	font-family: OverpassMono-Bold, monospace;
+	font-size: 1.4em;
+}
+.page p {
+	font-size: .9em;
+}
+.page .title {
+	text-align: left;
+	width: 100px;
+	padding: 5px 5px 5px 0;
+	border-bottom: 4px solid var(--warna3);
+}
+/*page1*/
+.page1 {
+}
+.profile {
+	width: 160px;
+	height: 160px;
+	background-color: maroon;
+	background-image: url('../img/profile.jpg');
+	border: 4px solid var(--warna2);
+	background-size: cover;
+	border-radius: 50%;
+	margin: 30px auto 15px;
+}
+.profDesc {
+	width: 200px;
+	padding: 20px 10px 10px 10px;
+	box-sizing: border-box;
+	text-align: center;
+	border-top: 4px solid var(--warna3);
+	margin: auto;
+}
+/*page2*/
+.page2 {
+	padding: 40px;
+}
+.aboutDesc {
+	text-indent: 30px;
+	padding: 20px;
+	text-align: left;
+}
+/*page3*/
+.page3 {
+	padding: 40px;
+}
+.contact {
+	padding: 20px 0;
+	text-align: left;
+	position: relative;
+}
+.contactItem {
+	display: block;
+	padding: 10px 5px;
+	margin: 10px 0;
+	border-radius: 4px;
+	/*background-color: var(--warna3);*/
+	font-size: 14px;
+}
+.contactItem:hover {
+	background-color: var(--warna3);
+	font-family: OverpassMono-Bold, monospace;
+	color: var(--warna6);
+}
+.contactItem [class*="icon"] {
+	font-size: 1.3em;
+}
+.forkme {
+	display: none;
+}
+/*toggle autoplay*/
+.tglSwitch {
+	position: absolute;
+	right: -104px;
+	bottom: 42px;
+	font-size: smaller;
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+.tS {
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 10px;
+	bottom: -3px;
+	right: -6px;
+}
+/*diP2*/
+.diP2 {
+	right: -64px;
+}
+.diP2 .tS {
+	right: -1px;
+}
+/*diP3*/
+.tS input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.tSReal {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 10px;
+	background-color: var(--warna1);
+}
+.tSReal:before {
+	position: absolute;
+	content: "";
+	height: 6px;
+	width: 6px;
+	left: 2px;
+	bottom: 2px;
+	background-color: var(--warna2);
+	transition: .4s;
+	border-radius: 100%;
+}
+.tS input:checked + .tSReal {
+	background-color: var(--warna2);
+}
+.tS input:checked + .tSReal:before {
+	-webkit-transform: translateX(6px);
+	-ms-transform: translateX(6px);
+	-o-transform: translateX(6px);
+	transform: translateX(6px);
+	background-color: var(--warna1);
+}
+.tSLabel {
+	cursor: pointer;
+	display: inline-block;
+}
+/*copyright*/
+.copyright {
+	font-size: 12px;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+.copyright a:hover {
+	font-family: OverpassMono-Bold, monospace;
+}
+/*responsive*/
+.row {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+}
+[class*="col"] {
+	position: static;
+	display: inline-block;
+	width: 100%;
+}
+@media only screen and (min-width: 660px) {
+	/*hover effect hanya untuk desktop*/
+	.menuItem:hover {
+		/*background-color: #222;*/
+		-webkit-transform: translate(2px, -2px);
+		-ms-transform: translate(2px, -2px);
+		-o-transform: translate(2px, -2px);
+		transform: translate(2px, -2px);
+	}
+	.shadow, .wrap {
+		width: 600px;
+	}
+	/*.row {
+		height: 100%;
+	}*/
+	[class*="col50"] {
+		width: calc(50% - 10px);
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	.col50a {
+		left: 0;
+	}
+	.col50b {
+		right: 0;
+	}
+	/*page1*/
+	.profile {
+		margin: 15px 15px 15px auto;
+	}
+	.profDesc {
+		width: 300px;
+		line-height: 2em;
+		padding: 20px 20px 20px 15px;
+		box-sizing: border-box;
+		text-align: left;
+		border-top: none;
+		border-left: 4px solid var(--warna3);
+		margin: 0 auto 0 -20px;
+	}
+	/*page2*/
+	.aboutDesc {
+		padding: 80px;
+		font-size: 1em;
+	}
+	/*page3*/
+	.contact {
+		padding: 10px 80px;
+	}
+	.contactItem {
+		width: 240px;
+		display: block;
+		padding: 10px 5px;
+		margin: 10px auto;
+		border-radius: 4px;
+		/*background-color: var(--warna3);*/
+		font-size: 1em;
+	}
+	.forkme {
+    font-size: smaller;
+    font-style: oblique;
+    display: block;
+    position: absolute;
+    right: -97px;
+    bottom: 65px;
+		-webkit-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
+}
