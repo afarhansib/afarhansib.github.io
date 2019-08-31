@@ -126,27 +126,27 @@ body {
 	-o-transform: rotate(-1deg) translate(-51%, -49%);
 	transform: rotate(-1deg) translate(-51%, -49%);
 }
-.shadow, .wrap {
+.shadow, .bg, .container {
 	min-height: 400px;
 	width: 300px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	border-radius: 10px;
 }
-.wrap {
+.bg {
 	background-color: var(--warna1);
-	-webkit-transform: rotate(0.5deg) translate(-49%, -51%);
-	-ms-transform: rotate(0.5deg) translate(-49%, -51%);
-	-o-transform: rotate(0.5deg) translate(-49%, -51%);
-	transform: rotate(0.5deg) translate(-49%, -51%);
+	-webkit-transform: rotate(0.5deg) translate(-50%, -50%);
+	-ms-transform: rotate(0.5deg) translate(-50%, -50%);
+	-o-transform: rotate(0.5deg) translate(-50%, -50%);
+	transform: rotate(0.5deg) translate(-50%, -50%);
 }
 .container {
 	height: 400px;
-	position: relative;
-	-webkit-transform: rotate(-0.5deg);
-	-ms-transform: rotate(-0.5deg);
-	-o-transform: rotate(-0.5deg);
-	transform: rotate(-0.5deg);
+	-webkit-transform: translate(-49.7%, -50.5%);
+	-ms-transform: translate(-49.7%, -50.5%);
+	-o-transform: translate(-49.7%, -50.5%);
+	transform: translate(-49.7%, -50.5%);
 }
 /*menu*/
 .menuA {
@@ -157,7 +157,7 @@ body {
 }
 .menuB {
 	position: absolute;
-	bottom: 0;
+	bottom: 2px;
 	left: -20px;
 	z-index: 9;
 }
@@ -180,6 +180,14 @@ body {
 	background-color: var(--warna2);
 	display: block;
 	cursor: pointer;
+}
+.menuA .menuItem i {
+	line-height: 25px;
+	vertical-align: text-top;
+}
+.menuB .menuItem i {
+	line-height: 30px;
+	vertical-align: text-top;
 }
 /*page*/
 .page {
@@ -297,6 +305,7 @@ body {
 /*diP2*/
 .diP2 {
 	right: -64px;
+	bottom: 49px;
 }
 .diP2 .tS {
 	right: -1px;
@@ -346,7 +355,7 @@ body {
 .copyright {
 	font-size: 12px;
 	position: absolute;
-	bottom: -40px;
+	bottom: -30px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -376,7 +385,13 @@ body {
 		-o-transform: translate(2px, -2px);
 		transform: translate(2px, -2px);
 	}
-	.shadow, .wrap {
+	.menuB {
+		bottom: 3px;
+	}
+	.menuA {
+		top: 8px;
+	}
+	.shadow, .bg, .container {
 		width: 600px;
 	}
 	/*.row {
@@ -440,5 +455,9 @@ body {
 		-ms-transform: rotate(270deg);
 		-o-transform: rotate(270deg);
 		transform: rotate(270deg);
+	}
+	/*copyright*/
+	.copyright {
+		bottom: -35px;
 	}
 }
