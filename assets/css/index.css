@@ -231,7 +231,7 @@ body {
 .profile {
 	width: 160px;
 	height: 160px;
-	background-color: maroon;
+	background-color: #fc0;
 	background-image: url('../img/profile.jpg');
 	border: 4px solid var(--warna2);
 	background-size: cover;
