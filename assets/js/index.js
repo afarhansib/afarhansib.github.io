@@ -9,6 +9,7 @@ const tglDarkMode = document.querySelector('#tDarkMode');
 let tO;
 let timoutSetInterval;
 let intervalAcak;
+let halDiacak = 4;
 let acak = true;
 // page current
 let pageNow = 1
@@ -80,11 +81,11 @@ function acakPage() {
 	// buat Loop waktu
 	intervalAcak = setInterval(function(){
 		// buat random nomor dari 1-3
-		let nPage = Math.floor((Math.random() * 3) + 1)
+		let nPage = Math.floor((Math.random() * halDiacak) + 1)
 		// console.log(nPage);
 		// console.log(pageNow);
 		nPage = nPage == pageNow ? nPage + 1 : nPage
-		nPage = nPage == 4 ? 1 : nPage
+		nPage = nPage == (halDiacak + 1) ? 1 : nPage
 		// console.log(nPage);
 
 		// ubah tombol
